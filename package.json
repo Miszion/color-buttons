@@ -1,13 +1,13 @@
 {
-  "name": "other_test",
+  "name": "color_buttons",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-scripts": "3.0.1",
     "ton": "0.0.2",
-    "tone": "^13.8.12"
+    "tone": "^13.8.22"
   },
   "scripts": {
     "start": "react-scripts start",
