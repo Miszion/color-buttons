@@ -4,16 +4,12 @@ import Selector from "./selector"
 
 
 function App() {
-  
+
   let position = 0;
-
-
-  
 
   return(
 
-          < Selector position = {position}>  </Selector>
-
+          <Selector position = {position}>  </Selector>
   );
 }
 

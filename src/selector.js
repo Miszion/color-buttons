@@ -192,19 +192,19 @@ class Selector extends React.Component
     {
         return(
         <div id = "overAll">
-        <div id = "contentA">
-        <div id = "buttonBlock">
-        <SquareButton color= {this.state.color1 || "goldenrod"} ></SquareButton>
-        <SquareButton color={this.state.color2 || "red"}></SquareButton>
-        <SquareButton color= {this.state.color3 || "slategrey"}></SquareButton>
-        <SquareButton color = {this.state.color4 || "darkcyan"}></SquareButton>
-        </div>
-        </div>
-        <div id = "contentB">
-        <div id = "selectorblock">
-        <div className = "selecting" onClick = {this.onDragMouse} style = {{marginLeft : this.state.position + "px" || this.props.position + "px" , backgroundColor : this.state.mainColor }}> </div>
-        </div>
-        </div>
+        	<div id = "contentA">
+        		<div id = "buttonBlock">
+        			<SquareButton color= {this.state.color1 || "goldenrod"} ></SquareButton>
+        			<SquareButton color={this.state.color2 || "red"}></SquareButton>
+        			<SquareButton color= {this.state.color3 || "slategrey"}></SquareButton>
+        			<SquareButton color = {this.state.color4 || "darkcyan"}></SquareButton>
+       			 </div>
+       		</div>
+        	<div id = "contentB">
+        		<div id = "selectorblock">
+        			<div className = "selecting" onClick = {this.onDragMouse} style = {{marginLeft : this.state.position + "px" || this.props.position + "px" , backgroundColor : this.state.mainColor }}> </div>
+     			</div>
+        	</div>
         </div>
         );
     }
