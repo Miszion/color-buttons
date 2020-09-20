@@ -9,6 +9,15 @@ html, body, #root, #overAll{
 
 }
 
+
+.cta-block {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
 #overAll{
     display: flow-root;
 }
@@ -40,4 +49,5 @@ html, body, #root, #overAll{
     height: 50px;
     background-color: red;
     display: block;
+    cursor: pointer;
 }

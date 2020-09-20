@@ -155,6 +155,7 @@ class Selector extends React.Component
     {
         return(
         <div id = "overAll">
+            <div className='cta-block'>Click the circle to get started</div>
         	<div id = "contentA">
         		<div id = "buttonBlock">
         			<SquareButton color= {this.state.color1 || "goldenrod"} ></SquareButton>
