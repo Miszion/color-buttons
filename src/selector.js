@@ -39,18 +39,14 @@ class Selector extends React.Component
 
 
                     if (this.state.direction === 1 && this.state.position >= 300){
-                        this.setState(
-                            {
-                                direction: -1
-                            }
-                        )
+                        this.setState({
+                            direction: -1
+                        })
                     }
                     else if (this.state.direction === -1 && this.state.position <= -150){
-                        this.setState(
-                            {
-                                direction: 1
-                            }
-                        )
+                        this.setState({
+                            direction: 1
+                        })
                     }
 
                     this.setState({
@@ -94,7 +90,6 @@ class Selector extends React.Component
 
         this.onDragMouse = this.onDragMouse.bind(this);
         this.changeColor = this.changeColor.bind(this);
-        this.handleKeyPress = this.handleKeyPress.bind(this);
     }
 
     changeColor(number){
