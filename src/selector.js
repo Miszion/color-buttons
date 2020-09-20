@@ -19,28 +19,15 @@ class Selector extends React.Component
 
     }
 
-    handleKeyPress = (event) =>
-    {
-
-        if (event.charCode === 13)
-        {
-        console.log("hello")
-        }
-    }
-
-
-
     onDragMouse()
     {
 
         if (this.state.clicked === true)
         {
             clearInterval(this.state.interval);
-            this.setState(
-                {
+            this.setState({
                 clicked: false
-                }
-            )
+            })
         }
         else
         {
@@ -51,48 +38,41 @@ class Selector extends React.Component
                     interval: setInterval(() => {
 
 
-        if (this.state.direction === 1 && this.state.position >= 300){
-            this.setState(
-                {
-                    direction: -1
-                }
-            )
-        }
-        else if (this.state.direction === -1 && this.state.position <= -150){
-            this.setState(
-                {
-                    direction: 1
-                }
-            )
-        }
+                    if (this.state.direction === 1 && this.state.position >= 300){
+                        this.setState(
+                            {
+                                direction: -1
+                            }
+                        )
+                    }
+                    else if (this.state.direction === -1 && this.state.position <= -150){
+                        this.setState(
+                            {
+                                direction: 1
+                            }
+                        )
+                    }
 
-            this.setState({
-                position : this.state.position + (this.state.direction * 2)
-                }
-            )
+                    this.setState({
+                        position : this.state.position + (this.state.direction * 2)
+                    })
 
-            if (this.state.position === -100)
-            {
-               this.changeMusic();
-               this.changeColor("one");
-            }
-            else if (this.state.position === -80)
-            {
-                this.changeMusic();
-                this.changeColor("two");
-            }
-            else if (this.state.position === 80)
-            {
-                this.changeMusic();
-                this.changeColor("three");
-                
-            }
-            else if (this.state.position === 200)
-            {
-                this.changeMusic();
-                this.changeColor("four");
-                
-            }
+                    if (this.state.position === -100){
+                        this.changeMusic();
+                        this.changeColor("one");
+                    }
+                    else if (this.state.position === -80){
+                        this.changeMusic();
+                        this.changeColor("two");
+                    }
+                    else if (this.state.position === 80){
+                        this.changeMusic();
+                        this.changeColor("three");
+                    }
+                    else if (this.state.position === 200){
+                        this.changeMusic();
+                        this.changeColor("four");
+                    }
 
         }
         
@@ -126,61 +106,49 @@ class Selector extends React.Component
         switch(number)
         {
         case "one" :
-                while (colorArray[randomNumber] === (this.state.color1))
-                {
-                   randomNumber = Math.floor(Math.random() * (colorArray.length));    
-                }
+            while (colorArray[randomNumber] === (this.state.color1)){
+                randomNumber = Math.floor(Math.random() * (colorArray.length));    
+            }
             
             let color = colorArray[randomNumber]
-            this.setState(
-            {
+            this.setState({
                 color1: color,
                 mainColor: color
-            }
-        )
+            })
          break;
         case "two":
-                while (colorArray[randomNumber] === (this.state.color2))
-                {
-                   randomNumber = Math.floor(Math.random() * (colorArray.length));    
-                }
+            while (colorArray[randomNumber] === (this.state.color2)){
+                randomNumber = Math.floor(Math.random() * (colorArray.length));    
+            }
             
-             let color2 = colorArray[randomNumber]
-                this.setState(
-                    {
-                        color2: color2,
-                        mainColor: color2
-                    }
-                )
-                break;
+            let color2 = colorArray[randomNumber]
+            this.setState({
+                color2: color2,
+                mainColor: color2
+            })
+            break;
         case "three":
-                while (colorArray[randomNumber] === (this.state.color3))
-                {
-                   randomNumber = Math.floor(Math.random() * (colorArray.length));    
-                }
+            while (colorArray[randomNumber] === (this.state.color3)){
+                randomNumber = Math.floor(Math.random() * (colorArray.length));    
+            }
             
             let color3 = colorArray[randomNumber]
-                this.setState(
-                    {
-                        color3: color3,
-                        mainColor: color3
-                    }
-                )
-                break;
+            this.setState({
+                    color3: color3,
+                    mainColor: color3
+                })
+            break;
         case "four":
-                while (colorArray[randomNumber] === (this.state.color4))
-                {
-                   randomNumber = Math.floor(Math.random() * (colorArray.length));    
-                }
+            while (colorArray[randomNumber] === (this.state.color4)){
+                randomNumber = Math.floor(Math.random() * (colorArray.length));    
+            }
             
-           let color4 = colorArray[randomNumber]
-                this.setState(
-                    {
-                        color4: color4,
-                        mainColor: color4
-                    }
-                )
-                break;
+            let color4 = colorArray[randomNumber]
+            this.setState({
+                color4: color4,
+                mainColor: color4
+            })
+            break;
          default:
             break;
         }
