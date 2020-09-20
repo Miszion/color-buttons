@@ -7,10 +7,7 @@ function App() {
 
   let position = 0;
 
-  return(
-
-          <Selector position = {position}>  </Selector>
-  );
+  return <Selector position = {position}>  </Selector>
 }
 
 export default App;
